@@ -26,11 +26,10 @@ class CategoryItem extends React.Component {
 
   render() {
     return (
-      <div>
+      <div onDoubleClick={this.handleEditMode}>
         <h4>Category: {this.props.category.name}</h4>
         <p>Budget: {this.props.category.budget}</p>
         <button onClick={this.handleDelete}>Delete</button>
-        <button onClick={this.handleEditMode}>Edit</button>
         {renderIf(this.state.editmode,
           <CategoryForm
             category={this.props.category}
