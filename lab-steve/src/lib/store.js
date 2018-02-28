@@ -1,4 +1,5 @@
 import { createStore } from 'redux';
-import reducer from '../reducers/category';
+// pulls in combineReducers from '../reducers/index.js'
+import reducer from '../reducers';
 
 export default () => createStore(reducer);
