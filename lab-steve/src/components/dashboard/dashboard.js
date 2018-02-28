@@ -11,7 +11,7 @@ class Dashboard extends React.Component {
         <h1>Expense Tracker</h1>
 
         <CategoryForm
-          buttonText='create'
+          buttonText='Create'
           onComplete={this.props.dashboardCategoryCreate}
         />
 
@@ -30,7 +30,7 @@ class Dashboard extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  categories: state
+  categories: state.categories,
 });
 
 const mapDispatchToProps = (dispatch, getState) => ({
