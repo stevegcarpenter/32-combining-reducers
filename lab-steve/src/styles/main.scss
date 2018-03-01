@@ -1,0 +1,75 @@
+/******************************************************************************/
+/*                     Main Styles                                            */
+$primarycolor: rgba(0, 0, 0, 0.7);
+$secondarycolor: #111;
+$whitetextcolor: rgba(255, 255, 255, 0.9);
+
+body {
+  width: 100%;
+
+  .application {
+    margin: auto;
+
+    .section-title {
+      text-align: center;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: Helvetica, sans-serif;
+    }
+
+    h1, h2 {
+      font-size: 1.5em;
+    }
+
+    h3, h4 {
+      font-size: 1.5em;
+    }
+
+    h5 {
+      font-size: 1em;
+    }
+
+    .logo {
+      font-family: 'Satisfy', cursive;
+      text-align: center;
+      font-size: 2em;
+      margin-top: 10px;
+    }
+
+    .category-item {
+      text-align: center;
+    }
+
+    button:hover {
+      background-color: $secondarycolor;
+    }
+
+    button {
+      border-radius: 5px;
+      background-color: $primarycolor;
+      border: none;
+      color: $whitetextcolor;
+      padding: 10px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-family: 'Satisfy', cursive;
+    }
+
+    form {
+      text-align: center;
+
+      input {
+        border-radius: 5px;
+        margin: 8px 3px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: none;
+        background-color: #959292;
+        color: $whitetextcolor;
+      }
+    }
+  }
+}

@@ -7,8 +7,8 @@ import CategoryItem from '../category/category-item/category-item';
 class Dashboard extends React.Component {
   render() {
     return (
-      <section>
-        <h1>Expense Tracker</h1>
+      <section className='application'>
+        <h1 className='logo'>Expense Tracker</h1>
 
         <CategoryForm
           buttonText='Create'
