@@ -33,6 +33,7 @@ class ExpenseForm extends React.Component {
     return (
       <form className="expense-form" onSubmit={this.handleSubmit}>
         <input
+          className='expense-name-input'
           type='text'
           name='name'
           placeholder='name'
@@ -41,6 +42,7 @@ class ExpenseForm extends React.Component {
         />
 
         <input
+          className='expense-cost-input'
           type='number'
           name='cost'
           placeholder='cost'
