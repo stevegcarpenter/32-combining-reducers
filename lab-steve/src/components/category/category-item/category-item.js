@@ -30,7 +30,7 @@ class CategoryItem extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='category-item'>
         <h4>Category: {this.props.category.name}</h4>
         <p>Budget: {this.props.category.budget}</p>
         <button onClick={this.handleDelete}>Delete</button>
