@@ -8,7 +8,7 @@ describe('Category reducer', () => {
 
   it('should handle CATEGORY_CREATE', () => {
     let categoryOne = { _id: '1235', name: 'foo', budget: '100', timestamp: new Date() };
-    let categoryTwo = { _id: '4567', title: 'bar', budget: '200', timestamp: new Date() };
+    let categoryTwo = { _id: '4567', name: 'bar', budget: '200', timestamp: new Date() };
 
     let state = reducer([categoryOne], {
       type: 'CATEGORY_CREATE',
@@ -21,14 +21,14 @@ describe('Category reducer', () => {
 
   it('should handle CATEGORY_UPDATE', () => {
     let categoryOne = { _id: '1235', name: 'foo', budget: '100', timestamp: new Date() };
-    let categoryOneUpdate = { _id: '1235', title: 'bar', budget: '200', timestamp: new Date() };
+    let categoryOneUpdate = { _id: '1235', name: 'bar', budget: '200', timestamp: new Date() };
 
     let state = reducer([categoryOne], {
       type: 'CATEGORY_UPDATE',
       payload: categoryOneUpdate,
     });
 
-    expect(state[0].title).toEqual(categoryOneUpdate.title);
+    expect(state[0].name).toEqual(categoryOneUpdate.name);
     expect(state[0].budget).toEqual(categoryOneUpdate.budget);
   });
 
