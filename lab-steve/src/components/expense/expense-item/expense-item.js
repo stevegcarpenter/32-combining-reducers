@@ -11,7 +11,6 @@ class ExpenseItem extends React.Component {
       editmode: false,
     };
 
-
     // Binding Handlers
     Object.getOwnPropertyNames(ExpenseItem.prototype)
       .filter(prop => prop.startsWith('handle'))
