@@ -10,8 +10,10 @@ class CategoryForm extends React.Component {
         budget: '',
       };
 
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+    // Binding Handlers
+    Object.getOwnPropertyNames(CategoryForm.prototype)
+      .filter(prop => prop.startsWith('handle'))
+      .map(prop => this[prop] = this[prop].bind(this));
   }
 
   handleChange(e) {
@@ -28,6 +30,7 @@ class CategoryForm extends React.Component {
     return (
       <form className="category-form" onSubmit={this.handleSubmit}>
         <input
+          className='category-name-input'
           type='text'
           name='name'
           placeholder='name'
@@ -36,6 +39,7 @@ class CategoryForm extends React.Component {
         />
 
         <input
+          className='category-budget-input'
           type='number'
           name='budget'
           placeholder='budget'

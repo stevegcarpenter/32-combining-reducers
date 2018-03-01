@@ -48,7 +48,7 @@ class CategoryItem extends React.Component {
           categoryId={this.props.category._id}
           onComplete={this.props.expenseItemCreate}
         />
-        {renderIf(this.props.expenses,
+        {renderIf(this.props.expenses[this.props.category._id].length,
           this.props.expenses[this.props.category._id].map(exp => (
             <ExpenseItem
               key={exp._id}
@@ -62,10 +62,10 @@ class CategoryItem extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  categories: state.categories,
   expenses: state.expenses,
 });
 
+// import action creators and attach them to props
 const mapDispatchToProps = (dispatch, getState) => ({
   categoryItemDelete: category => dispatch(categoryDelete(category)),
   categoryItemUpdate: category => dispatch(categoryUpdate(category)),
